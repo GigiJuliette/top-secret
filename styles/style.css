@@ -1,0 +1,71 @@
+:root {
+  --main-color: #3d3d3d;
+  --bg-color: #eaeaea;
+  --font: "Pirata One";
+  --logo-width: 60px;
+  --logo-height: calc(var(--logo-width)*2);
+  interpolate-size: allow-keywords;
+}
+
+nav {
+  display: flex;
+  width: 80%;
+  margin: 0 15%;
+  justify-content: space-between;
+  height: var(--logo-height);
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.gigiLogo {
+  display: inline-block;
+  width: var(--logo--width);
+  height: var(--logo-height);
+  padding-left: 20px;
+}
+
+.flower {
+  position: sticky;
+  top: var(--logo-height);
+  height: 840px;
+}
+.flower.left {
+  left: 0;
+}
+.flower.right {
+  left: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  font-family: var(--font);
+  height: 300vh;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+svg {
+  fill: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.hide {
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+/*# sourceMappingURL=style.css.map */

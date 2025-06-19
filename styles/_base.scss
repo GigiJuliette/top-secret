@@ -1,0 +1,14 @@
+:root {
+  --main-color: #3d3d3d;
+  --bg-color: #eaeaea;
+  --font: "Pirata One";
+  --logo-width: 60px;
+  --logo-height: calc(var(--logo-width)*2);
+  interpolate-size: allow-keywords;
+}
+
+@mixin relative-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
