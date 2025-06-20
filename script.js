@@ -49,7 +49,7 @@ const obsFade = new IntersectionObserver((entries) => {
   });
 }, {
   root: null,
-  rootMargin: "-25% 0px",
+  rootMargin: "-15% 0px",
   threshold: 0
 });
 
