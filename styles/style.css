@@ -103,6 +103,7 @@ nav .nav_item {
   width: var(--logo--width);
   max-width: 90vw;
   height: var(--logo-height);
+  transform-origin: center;
   transform: translate(42vw, 40vh) scale(6);
   padding-left: 20px;
 }
