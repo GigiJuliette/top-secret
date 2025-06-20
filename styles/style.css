@@ -6,6 +6,7 @@
   --logo-height: calc(var(--logo-width)*2);
   interpolate-size: allow-keywords;
   --title-font-size: 2.5rem;
+  --text-font-size: 2rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -19,16 +20,42 @@
     --logo-width: 30px;
     --title-font-size: 1.2rem;
   }
-  .flower {
-    display: none;
-  }
 }
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: var(--text-font-size);
+  margin: 10% 30% 0;
+  opacity: 0;
+}
+
+.filler {
+  height: 1000px;
+}
+
+.about span {
+  transition: 500ms;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: sticky;
   top: 0;
+  z-index: 3;
 }
 @media only screen and (max-width: 600px) {
   header {
@@ -62,7 +89,7 @@ nav .nav_item {
 }
 
 .navScroll {
-  animation: navScroll 1.5s 1.5s ease-in-out forwards;
+  animation: navScroll 1.5s 1.5s ease-in-out both;
 }
 
 @keyframes navScroll {
@@ -87,10 +114,11 @@ nav .nav_item {
   }
 }
 .flower {
+  z-index: 4;
   opacity: 0.5;
   position: fixed;
   top: var(--logo-height);
-  height: 840px;
+  height: 100vh;
   fill: transparent;
   stroke: var(--main-color);
   stroke-opacity: 0.5;
@@ -99,20 +127,21 @@ nav .nav_item {
   stroke-dashoffset: 11000;
 }
 .flower.left {
-  left: -7%;
+  top: 0;
+  left: -12%;
 }
 .flower.right {
-  right: -7%;
+  top: 0;
+  right: -12%;
 }
 @media only screen and (max-width: 1200px) {
   .flower {
-    top: 25%;
-    height: 500px;
+    display: none;
   }
 }
 
 .flowerScroll {
-  animation: svgStroke 2s ease-in-out forwards 1.5s;
+  animation: svgStroke 1.5s 1.5s ease-in-out both;
 }
 
 @keyframes svgStroke {
@@ -154,6 +183,16 @@ a {
 
 h2 {
   font-size: var(--title-font-size);
+}
+
+.hidden {
+  opacity: 0;
+  transition: 200ms ease;
+}
+
+.show {
+  opacity: 1;
+  transition: 200ms ease;
 }
 
 /*# sourceMappingURL=style.css.map */

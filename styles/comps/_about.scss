@@ -1,1 +1,26 @@
 @use '../base' as v;
+
+.about {
+  @include v.flex-center;
+  flex-direction: column;
+  font-size: var(--text-font-size);
+  margin: 10% 30% 0;
+  opacity: 0;
+}
+
+.filler {
+  height: 1000px;
+}
+
+.about span {
+  transition: 500ms;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateX(-100%);
+}

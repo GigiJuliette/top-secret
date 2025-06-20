@@ -6,6 +6,9 @@ header {
   justify-content: center;
   position: sticky;
   top: 0;
+  z-index: 3;
+  // backdrop-filter: blur(20px);
+  // -webkit-backdrop-filter: blur(20px);
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
@@ -39,7 +42,7 @@ nav {
 }
 
 .navScroll {
-  animation: navScroll 1.5s 1.5s ease-in-out forwards;
+  animation: navScroll v.$anim-timing;
 }
 
 @keyframes navScroll {
@@ -70,10 +73,11 @@ nav {
 // flower
 
 .flower {
+  z-index: 4;
   opacity: .5;
   position: fixed;
   top: var(--logo-height);
-  height: 840px;
+  height: 100vh;
   fill: transparent;
   stroke: var(--main-color);
   stroke-opacity: .5;
@@ -82,21 +86,22 @@ nav {
   stroke-dashoffset: 11000;
 
   &.left {
-    left: -7%;
+    top: 0;
+    left: -12%;
   }
 
   &.right {
-    right: -7%;
+    top: 0;
+    right: -12%;
   }
 
   @media only screen and (max-width: 1200px) {
-    top: 25%;
-    height: 500px;
+    display: none;
   }
 }
 
 .flowerScroll {
-  animation: svgStroke 2s ease-in-out forwards 1.5s;
+  animation: svgStroke v.$anim-timing;
 }
 
 
