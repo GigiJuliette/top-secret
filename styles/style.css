@@ -104,32 +104,17 @@ nav .nav_item {
   max-width: 90vw;
   height: var(--logo-height);
   transform: translate(42vw, 40vh) scale(6);
-}
-@media only screen and (max-width: 800px) {
-  .gigiLogo {
-    transform: translate(42vw, 40vh) scale(5);
-  }
-}
-@media only screen and (max-width: 600px) {
-  .gigiLogo {
-    transform: translate(10%, 40vh) scale(3);
-  }
+  padding-left: 20px;
 }
 
 .logoScroll {
   animation: logoScroll 1.5s ease-in-out forwards;
   transform-origin: center;
 }
-@media only screen and (max-width: 600px) {
-  .logoScroll {
-    padding-left: 0;
-  }
-}
 
 @keyframes logoScroll {
   to {
     transform: translate(0, 0) scale(1);
-    padding-left: 20px;
   }
 }
 .flower {
